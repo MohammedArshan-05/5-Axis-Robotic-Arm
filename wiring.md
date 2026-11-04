@@ -1,41 +1,35 @@
 Wiring and Connections — 5-Axis Robotic Arm
 
-System Overview
+Arduino Uno Pin Mapping
 
-The robotic arm uses five servo motors to control its five axes.
+Servo	Arduino Pin
+Servo 1	D3
+Servo 2	D5
+Servo 3	D6
+Servo 4	D9
+Servo 5	D10
 
-Each servo receives control signals from the controller and electrical power from a suitable power source.
+Wiring Diagram
 
-Connection Architecture
+Arduino UNO                  Servo Motors
+D3  ----------------------> Servo 1 Signal
+D5  ----------------------> Servo 2 Signal
+D6  ----------------------> Servo 3 Signal
+D9  ----------------------> Servo 4 Signal
+D10 ----------------------> Servo 5 Signal
+External Servo Power Supply
+Supply (+) ---------------> Servo V+
+Supply (-) ---------------> Servo GND
+Arduino GND --------------> Common GND
 
-          Controller Board
-                 |
-        -------------------
-        |   |   |   |   |
-       S1  S2  S3  S4  S5
-        |   |   |   |   |
-      Servo Motors (5 Axes)
-       External Power Supply
-                 |
-          Servo Power Rail
+Power Requirements
 
-Servo Connections
-
-Typical servo wiring:
-
-Servo Wire	Connection
-Signal	Controller PWM-capable output
-VCC	Suitable servo power supply
-GND	Power supply ground
-
-Important Electrical Notes
-
-* Use a suitable external power supply for the servos.
-* Do not power multiple high-current servos directly from the controller’s 5V pin.
-* Connect controller ground and servo power ground together.
-* Confirm each servo’s voltage and current requirements before wiring.
-* Verify the controller’s supported signal levels.
+* Use a separate regulated power supply for the servos.
+* Do not power five servos through the Arduino 5V pin.
+* Connect Arduino GND and external supply GND.
+* Never connect external servo supply positive directly to Arduino 5V.
+* Confirm servo voltage and current requirements before powering.
 
 Status
 
-Connection diagram is conceptual. Exact pin assignments and power ratings will be added after hardware identification.
+Signal pin assignments match the current Arduino firmware. Exact power ratings depend on the servo models.
