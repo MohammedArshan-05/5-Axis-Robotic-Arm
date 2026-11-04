@@ -1,0 +1,30 @@
+Arduino build files
+
+*.hex
+*.elf
+*.bin
+*.eep
+
+Compiled object files
+
+*.o
+
+Temporary files
+
+*.tmp
+*.bak
+*.swp
+
+Operating system files
+
+.DS_Store
+Thumbs.db
+
+Editor settings
+
+.vscode/
+.idea/
+
+Arduino IDE temporary files
+
+build/
