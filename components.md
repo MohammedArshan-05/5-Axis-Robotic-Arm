@@ -1,30 +1,40 @@
-Hardware Components — 5-Axis Robotic Arm
+# Hardware Components
 
-Main Hardware
+## Main Controller
+- Arduino Uno – 1
 
-Component	Purpose
-Robotic arm frame	Mechanical structure
-5 actuators	Joint movement
-Controller board	Main control unit
-Power supply	Electrical power
-Connecting wires	Electrical connections
+## Actuators
+- SG90 Micro Servo Motor – 3
+- MG996R High-Torque Servo Motor – 2
 
-Mechanical System
+## Total Actuators
+- 5 Servo Motors
 
-The robotic arm consists of five controlled axes. Each axis contributes to the movement of the arm.
+## Hardware Overview
 
-Electronic System
+| Component | Quantity | Purpose |
+|---|---:|---|
+| Arduino Uno | 1 | Main controller |
+| SG90 Servo | 3 | Lightweight joint movement |
+| MG996R Servo | 2 | Higher-torque joint movement |
+| External Power Supply | 1 | Dedicated servo power |
 
-The electronic system connects the controller, actuators, and power supply to enable coordinated movement.
+## Servo Motor Details
 
-Hardware Integration
+### SG90 Micro Servo
+- Compact and lightweight servo
+- Used for lower-load movements
+- Typical operating voltage: 4.8–6V
 
-* Mount actuators securely.
-* Connect the actuators to the control system.
-* Provide a suitable power source.
-* Verify electrical connections.
-* Test each joint individually.
+### MG996R High-Torque Servo
+- Higher-torque servo
+- Used for joints requiring greater force
+- Common operating range: 4.8–7.2V
 
-Important Note
+Actual voltage and current limits must be verified against the specific servo manufacturer's datasheet.
 
-Exact actuator models, controller specifications, and power ratings will be documented after hardware details are confirmed.
+## Important Notes
+- Servo motors require an external regulated power supply.
+- Do not power all five servos directly from the Arduino Uno 5V pin.
+- Connect the external supply ground to Arduino GND.
+- Verify servo wire polarity before connecting.
