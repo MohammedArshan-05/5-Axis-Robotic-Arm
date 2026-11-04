@@ -1,25 +1,76 @@
-Source Code — 5-Axis Robotic Arm
+Source Code – 5-Axis Robotic Arm
 
-This directory contains the firmware and control software for the 5-axis robotic arm.
+Overview
 
-Planned Software Modules
+This directory contains the Arduino firmware for controlling the five-axis robotic arm.
 
-File	Purpose
-main.ino	Main controller program
-servo_control.ino	Individual joint control
-movement.ino	Coordinated arm movement
-kinematics.ino	Robotic kinematics calculations
+The firmware uses the Arduino Uno and the Servo library to control five servo motors independently.
 
-Software Development Goals
+Main Firmware
 
-* Initialize the controller and actuators.
-* Control individual joints.
-* Implement coordinated movements.
-* Add forward and inverse kinematics.
-* Develop pick-and-place sequences.
+main.ino
+
+Hardware Configuration
+
+Component	Quantity
+Arduino Uno	1
+SG90 Servo	3
+MG996R Servo	2
+
+Pin Configuration
+
+Servo	Arduino Pin
+Servo 1	D3
+Servo 2	D5
+Servo 3	D6
+Servo 4	D9
+Servo 5	D10
+
+Software Requirements
+
+* Arduino IDE
+* Arduino Servo library
+* Arduino Uno board support
+
+Firmware Functions
+
+* Initialize five servo motors.
+* Set initial servo positions to 90 degrees.
+* Receive commands through Serial Monitor.
+* Identify the selected servo.
+* Validate joint number and angle.
+* Execute individual servo movements.
+
+Serial Command Format
+
+joint,angle
+
+Examples:
+
+1,90
+2,45
+3,120
+4,90
+5,180
+
+Upload Instructions
+
+1. Open main.ino in Arduino IDE.
+2. Connect the Arduino Uno through USB.
+3. Select Arduino Uno under Tools → Board.
+4. Select the correct COM port.
+5. Upload the firmware.
+6. Open Serial Monitor.
+7. Set baud rate to 9600.
+8. Enter a joint number and angle.
+
+Safety Notes
+
+* Use an appropriate external regulated power supply for the servos.
+* Connect the external supply ground to Arduino GND.
+* Verify servo voltage and current ratings.
+* Test servo movement without mechanical load first.
 
 Development Status
 
-Source code will be added after confirming the controller board and actuator specifications.
-
-Note: These are planned modules, not completed or tested firmware.
+Basic servo-control firmware is prepared. Hardware testing and movement validation are still required.
