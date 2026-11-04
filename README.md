@@ -66,6 +66,46 @@ Future Improvements
 * Motion trajectory planning
 * Wireless control interface
 * Workspace analysis
+Project Highlights
+
+Five-Axis Robotic Manipulation
+
+The robotic arm is designed to demonstrate coordinated movement across five joints using servo actuators and an Arduino Uno.
+
+Control System
+
+* Arduino Uno-based controller
+* Five independent servo channels
+* Serial Monitor command interface
+* Individual joint positioning
+
+Development Focus
+
+* Robotic motion control
+* Embedded programming
+* Mechanical design
+* Mechatronics integration
+
+Repository Structure
+
+5-Axis-Robotic-Arm/
+├── README.md
+├── components.md
+├── wiring.md
+├── .gitignore
+├── docs/
+│   ├── project-overview.md
+│   ├── servo-control.md
+│   └── technical-specifications.md
+├── src/
+│   ├── README.md
+│   └── main.ino
+└── images/
+    └── README.md
+
+Project Development
+
+Documentation and firmware are under development. Hardware testing and validation are ongoing.
 
 ⸻
 
