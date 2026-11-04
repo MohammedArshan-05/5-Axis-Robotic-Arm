@@ -1,14 +1,26 @@
 Project Images
 
-This folder is reserved for genuine photographs and visual documentation of the 5-Axis Robotic Arm.
+This directory is reserved for photographs, diagrams, and visual documentation of the 5-Axis Robotic Arm.
 
 Planned Images
 
-* Complete robotic arm assembly
-* Mechanical structure
-* Arduino Uno controller
-* Servo motor arrangement
-* Electronic connections
-* Project testing and movement
+Image	Description
+robotic-arm.jpg	Complete robotic arm assembly
+hardware-setup.jpg	Arduino Uno and servo motor arrangement
+wiring-diagram.png	Electrical connection diagram
+joint-mechanism.jpg	Servo-based joint mechanism
+testing.jpg	Robotic arm testing and operation
 
-All project images will be added as development progresses.
+Image Guidelines
+
+* Use clear, high-resolution photographs.
+* Show actual project hardware.
+* Include wiring and mechanical details where useful.
+* Use descriptive filenames.
+* Avoid unrelated or stock images.
+
+Purpose
+
+These images will help document the physical construction, hardware integration, and testing of the robotic arm.
+
+Note: Add actual project images when they are available. The filenames above are planned image names, not existing photographs.
