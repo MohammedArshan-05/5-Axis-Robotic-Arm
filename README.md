@@ -1,90 +1,35 @@
 5-Axis Robotic Arm
 
-Design • Robotics • Motion Control • Mechatronics
-
-A 5-axis robotic arm project focused on mechanical design, multi-axis movement, servo control, and hardware integration.
-
-⸻
+A servo-controlled robotic arm developed using Arduino Uno, designed to demonstrate multi-axis movement, joint positioning, and robotic manipulation.
 
 Project Overview
 
-This project involves the development of a 5-axis robotic arm capable of performing coordinated movements across multiple joints.
+This project focuses on developing a five-axis robotic arm using a combination of micro and high-torque servo motors. The Arduino Uno acts as the main controller and manages individual joint movements.
 
-The objective is to explore robotic kinematics, joint movement, actuator control, and practical mechatronics system integration.
+Hardware Configuration
+
+Component	Quantity
+Arduino Uno	1
+SG90 Micro Servo	3
+MG996R High-Torque Servo	2
+Total Servo Motors	5
 
 Key Features
 
-* 5-axis robotic arm configuration
-* Multi-joint movement
-* Servo-based motion control
-* Mechanical structure and assembly
-* Embedded control system
-* Hardware and software integration
-
-System Architecture
-
-        Control Input
-              |
-              v
-      Microcontroller
-              |
-              v
-       Servo Control
-              |
-              v
-       5-Axis Robotic Arm
-              |
-              v
-       Joint Movement
-
-Engineering Areas
-
-Area	Focus
-Robotics	5-axis joint configuration
-Mechanical	Arm structure and assembly
-Electronics	Actuator connections
-Embedded Systems	Motion-control programming
-Mechatronics	Hardware integration
-
-Project Objectives
-
-* Develop coordinated movement across five axes.
-* Understand robotic joint configurations.
-* Implement controlled actuator movement.
-* Explore forward and inverse kinematics.
-* Improve mechanical and electronic integration.
-
-Project Status
-
-Development and documentation in progress.
-
-Future Improvements
-
-* Forward kinematics implementation
-* Inverse kinematics implementation
-* Pick-and-place functionality
-* Motion trajectory planning
-* Wireless control interface
-* Workspace analysis
-Project Highlights
-
-Five-Axis Robotic Manipulation
-
-The robotic arm is designed to demonstrate coordinated movement across five joints using servo actuators and an Arduino Uno.
-
-Control System
-
-* Arduino Uno-based controller
-* Five independent servo channels
-* Serial Monitor command interface
+* Five servo-controlled joints
 * Individual joint positioning
+* Serial Monitor-based control
+* Arduino-based control architecture
+* Expandable design for future automation
 
-Development Focus
+Pin Configuration
 
-* Robotic motion control
-* Embedded programming
-* Mechanical design
-* Mechatronics integration
+Servo Channel	Arduino Pin
+Servo 1	D3
+Servo 2	D5
+Servo 3	D6
+Servo 4	D9
+Servo 5	D10
 
 Repository Structure
 
@@ -93,22 +38,59 @@ Repository Structure
 ├── components.md
 ├── wiring.md
 ├── .gitignore
+├── src/
+│   ├── main.ino
+│   └── README.md
 ├── docs/
 │   ├── project-overview.md
 │   ├── servo-control.md
 │   └── technical-specifications.md
-├── src/
-│   ├── README.md
-│   └── main.ino
 └── images/
     └── README.md
 
-Project Development
+Software
 
-Documentation and firmware are under development. Hardware testing and validation are ongoing.
+* Arduino IDE
+* Arduino C/C++
+* Servo.h library
+
+Control Method
+
+The current firmware accepts serial commands in this format:
+
+joint,angle
+
+Example:
+
+1,90
+
+This commands servo channel 1 to move to 90 degrees.
+
+Power and Safety
+
+The servo motors require a suitable external regulated power supply. The Arduino and servo supply grounds must be connected together.
+
+Do not power all five servos from the Arduino Uno 5V output. Verify the exact servo voltage and current ratings before operation.
+
+Development Status
+
+* Arduino Uno control firmware prepared
+* Five servo channels configured
+* Basic serial joint control implemented
+* Hardware integration and movement validation pending
+
+Future Improvements
+
+* Joystick control
+* Wireless control
+* Pick-and-place operation
+* Inverse kinematics
+* Object detection and automation
 
 ⸻
 
-Developed as a Mechatronics Engineering Project
+Project Category: Robotics | Mechatronics | Embedded Systems
 
-Focus: Robotics | Embedded Systems | Motion Control | Automation
+Controller: Arduino Uno
+
+Actuation: SG90 and MG996R Servo Motors
